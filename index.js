@@ -13,6 +13,7 @@ const parse = (wkt)=> {
   let srid = (parts.shift() || '').split('=').pop();
 
   let i = 0;
+  //test
 
   function $ (re) {
     let match = _.substring(i).match(re);
