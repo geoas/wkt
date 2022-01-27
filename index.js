@@ -176,6 +176,7 @@ const parse = (wkt)=> {
     white();
     let c = multicoords();
     if (!c) return null;
+    console.log("test");
     return {
       type: 'MultiPolygon',
       coordinates: c
