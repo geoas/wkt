@@ -1,4 +1,4 @@
-(function (tools, $, undefined) {
+(function (gis, $, undefined) {
 
     /**
      * Parse WKT and return GeoJSON.
@@ -6,7 +6,7 @@
      * @return {?Object} A GeoJSON geometry object
      */
 
-    tools.wktToGeoJsonGeometry = function (wkt) {
+    gis.wktToGeoJsonGeometry = function (wkt) {
         let numberRegexp = /[-+]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?/;
 // Matches sequences like '100 100' or '100 100 100'.
         let coordFormat = new RegExp('^' + numberRegexp.source + '(\\s' + numberRegexp.source + '){1,}');
@@ -276,7 +276,7 @@
     /**
      * Stringifies a GeoJSON object into WKT
      */
-    tools.geoJsonToWkt = function (geoJSON) {
+    gis.geoJsonToWkt = function (geoJSON) {
         if (geoJSON.type === 'Feature') {
             geoJSON = geoJSON.geometry;
         }
@@ -354,4 +354,4 @@
         }
     };
 
-}(window.tools = window.tools || {}, jQuery));
+}(window.gis = window.gis || {}, jQuery));
