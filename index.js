@@ -6,7 +6,7 @@
      * @return {?Object} A GeoJSON geometry object
      */
 
-    tools.wktToGeoJson = function (wkt) {
+    tools.wktToGeoJsonGeometry = function (wkt) {
         let numberRegexp = /[-+]?([0-9]*\.[0-9]+|[0-9]+)([eE][-+]?[0-9]+)?/;
 // Matches sequences like '100 100' or '100 100 100'.
         let coordFormat = new RegExp('^' + numberRegexp.source + '(\\s' + numberRegexp.source + '){1,}');
